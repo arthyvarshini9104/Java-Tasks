@@ -24,9 +24,9 @@ public class RegisterServlet extends HttpServlet {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             Connection con = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/login_app", // DB URL
-                "root", // DB user
-                "your_db_password" // DB password
+                "jdbc:mysql://localhost:3306/login_app", 
+                "root", 
+                "your_db_password" 
             );
 
             String sql = "INSERT INTO users (name, gender, age, username, password, role) VALUES (?, ?, ?, ?, ?, ?)";
@@ -54,4 +54,5 @@ public class RegisterServlet extends HttpServlet {
         }
     }
 }
+
 
